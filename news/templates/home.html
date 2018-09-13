@@ -2,5 +2,12 @@
 
 {% block content %}
     <h1>Hello zhanibek</h1>
+    <ul>
+        {% for x in api.Data %}
+            <li>{{ x.title }}</li>
+        {% endfor %}
+    </ul>
+
     {{ api.Data }}
+    
 {% endblock %}
