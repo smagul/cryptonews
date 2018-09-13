@@ -5,7 +5,7 @@ from django.shortcuts import render
 
 def home(request):
     # Grab Crypto Price Data
-    price_request = requests.get("https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,XRP&tsyms=USD")
+    price_request = requests.get("https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH,XRP,BCH,EOS,XLM,LTC,USDT,XMR,ADA,MIOTA&tsyms=USD")
     price = json.loads(price_request.content)
 
     # Grab Crypto News
