@@ -2,6 +2,12 @@
 
 {% block content %}
 
+{% for key, value in price.DISPLAY.items %}
+    {{ key }} - {{ value.USD.PRICE }}
+{% endfor %}
+
+<br/>
+<br/>
 {{ price.DISPLAY }}
 
 <div class="jumbotron">
