@@ -23,8 +23,9 @@ def prices(request):
         quote = request.POST['quote']
         quote = quote.upper()
         crypto_request = requests.get(
-        "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=" + quote + "&tsyms=USD")
+            "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=" + quote + "&tsyms=USD")
         crypto = json.loads(crypto_request.content)
+
         return render(request, 'prices.html', {'quote': quote, 'crypto': crypto})
 
     return render(request, 'prices.html', {})
